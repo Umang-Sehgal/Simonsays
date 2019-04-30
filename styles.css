@@ -47,7 +47,17 @@ body {
   background-color: yellow;
 }
 
+.start{
+  background-color: #fff;
+  text-align: center;
+  font-size: 2rem;
+}
+
 .pressed {
   box-shadow: 0 0 20px white;
   background-color: grey;
+}
+
+.hidden{
+  visibility: hidden;
 }

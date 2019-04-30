@@ -1,5 +1,3 @@
-alert("A game about memory");
-
 var buttonColors = ["red", "blue", "green", "yellow"];
 
 var gamePattern = [];                                                  //stores sequenece of the game to match 
@@ -11,11 +9,13 @@ var level = 0;
 var started = false;
 
 
-$(document).keydown(function () {
+$(".start").click(function () {
     if (!started) {
         $("#level-title").text("Level " + level);
         nextSequence();
         started = true;
+        $(".start").addClass("hidden");
+        $(".container").removeClass("hidden");
     }
 
 })
@@ -54,7 +54,7 @@ $(".btn").on("click", function () {
 })
 
 function playSound(name) {                                                       //sound
-    var audio = new Audio(name + ".mp3");
+    var audio = new Audio("sounds/" + name + ".mp3");
     audio.play();
 }
 
@@ -81,8 +81,13 @@ function checkAnswer(currentLevel) {
         setTimeout(function () {
             $("body").removeClass("game-over");
         }, 200);
-        $("#level-title").text("Game Over, Press Any Key to Restart");
-        setTimeout($(document).keydown(startOver()),200);
+
+        $(".start").removeClass("hidden");
+        $(".start").text("Restart");
+        $(".container").addClass("hidden");
+
+        $("#level-title").text("Press Restart, to Play Again");
+        setTimeout($(document).click(startOver()),2000);
     }
 }
 
