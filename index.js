@@ -1,3 +1,5 @@
+alert("A game about memory");
+
 var buttonColors = ["red", "blue", "green", "yellow"];
 
 var gamePattern = [];                                                  //stores sequenece of the game to match 
