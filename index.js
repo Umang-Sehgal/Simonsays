@@ -55,7 +55,7 @@ $(".bttn").on("click", function () {
 })
 
 function playSound(name) {                                                       //sound
-    var audio = new Audio("sounds/" + name + ".mp3");
+    var audio = new Audio(name + ".mp3");
     audio.play();
 }
 
