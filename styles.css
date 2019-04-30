@@ -70,3 +70,14 @@ p {
 .hidden{
   visibility: hidden;
 }
+
+@media only screen and (max-width:768px){
+.container {
+  width: 200px;
+  height: 200px;
+}
+
+.bttn{
+  flex-basis: 40%;
+}
+}
