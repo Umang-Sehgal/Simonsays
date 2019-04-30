@@ -45,7 +45,7 @@ function nextSequence() {
 
 }
 
-$(".btn").on("click", function () {
+$(".bttn").on("click", function () {
     var userChosenColor = $(this).attr("id");
     userClickedPattern.push(userChosenColor);
 
@@ -71,7 +71,7 @@ function checkAnswer(currentLevel) {
     if (userClickedPattern[currentLevel] === gamePattern[currentLevel]) {
         console.log("success");
         if (userClickedPattern.length === gamePattern.length) {
-            setTimeout(function () { nextSequence(); }, 1000);
+            setTimeout(nextSequence, 1000);
         }
     }
     else {
