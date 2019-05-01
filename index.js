@@ -38,7 +38,7 @@ function nextSequence() {
 
     gamePattern.push(randomChosenColor);
 
-    $("#" + randomChosenColor).fadeOut(100).fadeIn(100);            //animation
+    $("#" + randomChosenColor).fadeOut(100).fadeIn(100);            //
 
     playSound(randomChosenColor);
 
@@ -55,7 +55,7 @@ $(".bttn").on("click", function () {
 })
 
 function playSound(name) {                                                       //sound
-    var audio = new Audio(name + ".mp3");
+    var audio = new Audio("sounds/" + name + ".mp3");
     audio.play();
 }
 
@@ -88,11 +88,11 @@ function checkAnswer(currentLevel) {
         $(".container").addClass("hidden");
 
         $("#level-title").text("Press Restart, to Play Again");
-        $(".start").click(setTimeout(startOver,2000));
+        startOver();
     }
 }
 
-function startOver(){
+function startOver() {
     started = false;
     level = 0;
     gamePattern = [];
