@@ -88,7 +88,7 @@ function checkAnswer(currentLevel) {
         $(".container").addClass("hidden");
 
         $("#level-title").text("Press Restart, to Play Again");
-        setTimeout($(document).click(startOver()),2000);
+        $(".start").click(setTimeout(startOver,2000));
     }
 }
 
