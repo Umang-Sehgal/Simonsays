@@ -80,4 +80,7 @@ p {
 .bttn{
   flex-basis: 40%;
 }
+  #level-title {
+  font-size: 2rem;
+}
 }
