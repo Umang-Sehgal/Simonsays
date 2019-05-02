@@ -1,3 +1,7 @@
+alert("Welcome to memory game");
+
+var name = prompt("Please enter your name");
+
 var buttonColors = ["red", "blue", "green", "yellow"];
 
 var gamePattern = [];                                                  //stores sequenece of the game to match 
@@ -87,7 +91,7 @@ function checkAnswer(currentLevel) {
         $(".start").text("Restart");
         $(".container").addClass("hidden");
 
-        $("#level-title").text("Press Restart, to Play Again");
+        $("#level-title").text("Well tried " + name  + ", you reached level " + level);
         startOver();
     }
 }
