@@ -1,4 +1,4 @@
-alert("Welcome to memory game");
+alert("Welcome to memory game, observe the blinking colors and press them in the sequence");
 
 var name = prompt("Please enter your name");
 
